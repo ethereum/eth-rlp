@@ -43,7 +43,9 @@ setup(
     url='https://github.com/ethereum/eth-rlp',
     include_package_data=True,
     install_requires=[
-        "eth-utils>=0.7.4,<1.0.0",
+        "eth-utils>=1.0.0-beta.1,<2",
+        "hexbytes>=0.1.0-alpha.2,<1",
+        "rlp>=0.6.0,<1",
     ],
     setup_requires=['setuptools-markdown'],
     extras_require=extras_require,
