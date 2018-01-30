@@ -19,7 +19,18 @@ pip install eth-rlp
 
 ## Developer setup
 
-If you would like to hack on eth-rlp, set up your dev environment with:
+If you would like to hack on eth-rlp, please check out the
+[Ethereum Development Tactical Manual](https://github.com/pipermerriam/ethereum-dev-tactical-manual)
+for information on how we do:
+
+- Testing
+- Pull Requests
+- Code Style
+- Documentation
+
+### Development Environment Setup
+
+You can set up your dev environment with:
 
 ```sh
 
