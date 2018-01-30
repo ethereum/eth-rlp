@@ -1,7 +1,19 @@
-<PROJECT_NAME>
+eth-rlp
 ==============================
 
-<SHORT_DESCRIPTION>
+RLP definitions for common Ethereum objects in Python
+
+Install with
+
+.. code-block:: shell
+
+  pip install eth_rlp
+
+Import with
+
+::
+
+  from eth_rlp import HashableRLP
 
 Contents
 --------
@@ -9,7 +21,7 @@ Contents
 .. toctree::
     :maxdepth: 3
 
-    <MODULE_NAME>
+    eth_rlp
     releases
 
 
