@@ -26,8 +26,8 @@ class HashableRLP(rlp.Serializable):
                 etc...
             )
 
-        my_obj = MyRLP(name2=b'\xff', name1=1)
-        list(my_obj) == [1, b'\xff']
+        my_obj = MyRLP(name2=b'\\xff', name1=1)
+        list(my_obj) == [1, b'\\xff']
         # note that the iteration order is always in RLP-defined order
     '''
 
@@ -38,13 +38,13 @@ class HashableRLP(rlp.Serializable):
 
         ::
 
-            my_obj = MyRLP(name1=1, name2=b'\xff')
+            my_obj = MyRLP(name1=1, name2=b'\\xff')
 
         This method enables initialization with.
 
         ::
 
-            my_obj = MyRLP.from_dict({'name1': 1, 'name2': b'\xff'})
+            my_obj = MyRLP.from_dict({'name1': 1, 'name2': b'\\xff'})
 
         In general, the standard initialization is preferred, but
         some approaches might favor this API, like when using
