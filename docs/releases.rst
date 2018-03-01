@@ -8,6 +8,7 @@ Released Mar 1, 2018
 
 - Marked stable
 - Upgraded eth-utils and hexbytes to stable versions
+- Add pypy3 support
 
 v0.1.0-alpha.2
 --------------
