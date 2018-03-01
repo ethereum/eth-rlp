@@ -1,10 +1,19 @@
 Release Notes
 =============
 
+v0.1.0
+--------------
+
+Released Mar 1, 2018
+
+- Marked stable
+- Upgraded eth-utils and hexbytes to stable versions
+- Add pypy3 support
+
 v0.1.0-alpha.2
 --------------
 
-Released Jan 30, 2017
+Released Jan 30, 2018
 
 - First working version
 - Some docs
