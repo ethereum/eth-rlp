@@ -9,6 +9,7 @@ extras_require={
     'test': [
         "pytest==3.3.2",
         "tox>=2.9.1,<3",
+        "eth-hash[pycryptodome]",
     ],
     'lint': [
         "flake8==3.4.1",
@@ -45,8 +46,8 @@ setup(
     url='https://github.com/ethereum/eth-rlp',
     include_package_data=True,
     install_requires=[
-        "eth-utils>=1.0.0-beta.1,<2",
-        "hexbytes>=0.1.0-alpha.2,<1",
+        "eth-utils>=1.0.1,<2",
+        "hexbytes>=0.1.0,<1",
         "rlp>=0.6.0,<1",
     ],
     setup_requires=['setuptools-markdown'],
@@ -57,7 +58,7 @@ setup(
     keywords='ethereum',
     packages=find_packages(exclude=["tests", "tests.*"]),
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Natural Language :: English',
