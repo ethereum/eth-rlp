@@ -1,6 +1,13 @@
 Release Notes
 =============
 
+v0.1.1
+--------------
+
+Released April 25, 2018
+
+- Add support for rlp version 1 (but still backwards-compatible with v0)
+
 v0.1.0
 --------------
 
