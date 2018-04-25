@@ -89,4 +89,7 @@ class HashableRLP(rlp.Serializable):
         )
 
     def __iter__(self):
-        return iter(getattr(self, field) for field, _ in self.fields)
+        if hasattr(self, 'fields'):
+            return iter(getattr(self, field) for field, _ in self.fields)
+        else:
+            return super().__iter__()
