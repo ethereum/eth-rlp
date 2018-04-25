@@ -48,9 +48,10 @@ setup(
     install_requires=[
         "eth-utils>=1.0.1,<2",
         "hexbytes>=0.1.0,<1",
-        "rlp>=0.6.0,<1",
+        "rlp>=0.6.0,<2",
     ],
     setup_requires=['setuptools-markdown'],
+    python_requires='>=3.5, <4',
     extras_require=extras_require,
     py_modules=['eth_rlp'],
     license="MIT",
