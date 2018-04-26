@@ -38,7 +38,7 @@ extras_require['dev'] = (
 setup(
     name='eth-rlp',
     # *IMPORTANT*: Don't manually change the version here. Use `make bump`, as described in readme
-    version='0.1.1',
+    version='0.1.2',
     description="""eth-rlp: RLP definitions for common Ethereum objects in Python""",
     long_description_markdown_filename='README.md',
     author='Jason Carver',
