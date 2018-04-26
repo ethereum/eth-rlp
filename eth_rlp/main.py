@@ -101,9 +101,7 @@ class HashableRLP(rlp.Serializable):
         :returns: mapping of RLP field names to field values
         :rtype: dict
         '''
-        as_dict_fn = getattr(
-            super(),
-            'as_dict',
-            lambda: vars(self)
-        )
-        return as_dict_fn()
+        try:
+            return super().as_dict()
+        except AttributeError:
+            return vars(self)
