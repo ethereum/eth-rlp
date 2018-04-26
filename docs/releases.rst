@@ -1,6 +1,13 @@
 Release Notes
 =============
 
+v0.1.2
+--------------
+
+Released April 25, 2018
+
+- Add :meth:`~eth_rlp.main.HashableRLP.as_dict` as a shim for joint v0/v1 compatibility
+
 v0.1.1
 --------------
 

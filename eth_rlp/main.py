@@ -95,7 +95,15 @@ class HashableRLP(rlp.Serializable):
             return super().__iter__()
 
     def as_dict(self):
-        if hasattr(super(), 'as_dict'):
-            return super().as_dict()
-        else:
-            return vars(self)
+        '''
+        Convert rlp object to a dict
+
+        :returns: mapping of RLP field names to field values
+        :rtype: dict
+        '''
+        as_dict_fn = getattr(
+            super(),
+            'as_dict',
+            lambda: vars(self)
+        )
+        return as_dict_fn()
