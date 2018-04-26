@@ -71,3 +71,17 @@ def test_iteration(unserialized, expected_fields):
     for actual, expected in zip(rlp_obj, expected_fields):
         assert actual == expected
     assert list(rlp_obj) == expected_fields
+
+
+@pytest.mark.parametrize(
+    'unserialized, expected_dict',
+    (
+        (
+            {'pos2': 1, 'pos1': 0},
+            {'pos2': 1, 'pos1': 0},
+        ),
+    ),
+)
+def test_to_dict(unserialized, expected_dict):
+    rlp_obj = TwoIntRLP(**unserialized)
+    assert rlp_obj.as_dict() == expected_dict

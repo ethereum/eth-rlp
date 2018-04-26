@@ -93,3 +93,9 @@ class HashableRLP(rlp.Serializable):
             return iter(getattr(self, field) for field, _ in self.fields)
         else:
             return super().__iter__()
+
+    def as_dict(self):
+        if hasattr(super(), 'as_dict'):
+            return super().as_dict()
+        else:
+            return vars(self)
