@@ -3,6 +3,27 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-rlp v0.2.0 (2020-09-01)
+---------------------------
+
+Features
+~~~~~~~~
+
+- Add support for pyrlp v2.0.0-alpha.1 (as long as you don't use pypy) (`#8 <https://github.com/ethereum/eth-rlp/issues/8>`__)
+
+
+Deprecations and Removals
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Dropped py3.5 support (`#7 <https://github.com/ethereum/eth-rlp/issues/7>`__)
+
+
+Miscellaneous changes
+~~~~~~~~~~~~~~~~~~~~~
+
+- Merge updates from the project template (`#7 <https://github.com/ethereum/eth-rlp/issues/7>`__)
+
+
 v0.1.2
 --------------
 
