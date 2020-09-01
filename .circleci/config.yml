@@ -84,6 +84,18 @@ jobs:
       - image: pypy
         environment:
           TOXENV: pypy3-core-rlp1
+  py36-core-rlp2:
+    <<: *common
+    docker:
+      - image: circleci/python:3.6
+        environment:
+          TOXENV: py36-core-rlp2
+  py37-core-rlp2:
+    <<: *common
+    docker:
+      - image: circleci/python:3.7
+        environment:
+          TOXENV: py37-core-rlp2
 workflows:
   version: 2
   test:
@@ -96,3 +108,5 @@ workflows:
       - py36-core-rlp1
       - py37-core-rlp1
       - pypy3-core-rlp1
+      - py36-core-rlp2
+      - py37-core-rlp2
