@@ -254,7 +254,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'eth-rlp', 'eth-rlp Documentation',
-   'The Ethereum Foundation', '<PROJECT_NAME>', '<SHORT_DESCRIPTION>',
+   'The Ethereum Foundation', 'eth-rlp', 'RLP definitions for common Ethereum objects in Python',
    'Miscellaneous'),
 ]
 
