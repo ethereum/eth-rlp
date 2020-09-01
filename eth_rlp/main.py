@@ -1,8 +1,8 @@
-from cytoolz import (
-    pipe,
-)
 from eth_utils import (
     keccak,
+)
+from eth_utils.toolz import (
+    pipe,
 )
 from hexbytes import (
     HexBytes,
@@ -52,7 +52,7 @@ class HashableRLP(rlp.Serializable):
 
         ::
 
-            return cytoolz.pipe(
+            return eth_utils.toolz.pipe(
                 my_dict,
                 normalize,
                 validate,
