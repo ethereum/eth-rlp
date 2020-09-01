@@ -5,7 +5,30 @@ version: 2.0
 common: &common
   working_directory: ~/repo
   steps:
-    - checkout
+    - run:
+        name: custom http checkout
+        command: |
+          mkdir -p $HOME/repo
+          cd $HOME/repo
+          REPO_URL="https://github.com/carver/eth-rlp.git"
+          echo "Cloning from '$REPO_URL'"
+          git clone "$REPO_URL" .
+          if [ -n "$CIRCLE_TAG" ]
+          then
+            git fetch --force origin "refs/tags/${CIRCLE_TAG}"
+          else
+            git fetch --force origin "master:remotes/origin/master"
+          fi
+          if [ -n "$CIRCLE_TAG" ]
+          then
+            git reset --hard "$CIRCLE_SHA1"
+            git checkout -q "$CIRCLE_TAG"
+          elif [ -n "$CIRCLE_BRANCH" ]
+          then
+            git reset --hard "$CIRCLE_SHA1"
+            git checkout -q -B "$CIRCLE_BRANCH"
+          fi
+          git reset --hard "$CIRCLE_SHA1"
     - run:
         name: merge pull request base
         command: ./.circleci/merge_pr.sh
