@@ -22,7 +22,7 @@ Contents
     :maxdepth: 3
 
     eth_rlp
-    releases
+    release_notes
 
 
 Indices and tables

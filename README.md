@@ -9,9 +9,7 @@
 
 RLP definitions for common Ethereum objects in Python
 
-* Python 3.5+ support
-
-Read more in the [documentation on ReadTheDocs](http://eth-rlp.readthedocs.io/). [View the change log](http://eth-rlp.readthedocs.io/en/latest/releases.html).
+Read more in the [documentation on ReadTheDocs](http://eth-rlp.readthedocs.io/). [View the change log](http://eth-rlp.readthedocs.io/en/latest/release_notes.html).
 
 ## Quickstart
 
@@ -19,10 +17,10 @@ Read more in the [documentation on ReadTheDocs](http://eth-rlp.readthedocs.io/).
 pip install eth-rlp
 ```
 
-## Developer setup
+## Developer Setup
 
-If you would like to hack on eth-rlp, please check out the
-[Ethereum Development Tactical Manual](https://github.com/pipermerriam/ethereum-dev-tactical-manual)
+If you would like to hack on eth-rlp, please check out the [Snake Charmers
+Tactical Manual](https://github.com/ethereum/snake-charmers-tactical-manual)
 for information on how we do:
 
 - Testing
@@ -35,7 +33,6 @@ for information on how we do:
 You can set up your dev environment with:
 
 ```sh
-
 git clone git@github.com:ethereum/eth-rlp.git
 cd eth-rlp
 virtualenv -p python3 venv
@@ -89,7 +86,9 @@ The version format for this repo is `{major}.{minor}.{patch}` for stable, and
 `{major}.{minor}.{patch}-{stage}.{devnum}` for unstable (`stage` can be alpha or beta).
 
 To issue the next version in line, specify which part to bump,
-like `make release bump=minor` or `make release bump=devnum`.
+like `make release bump=minor` or `make release bump=devnum`. This is typically done from the
+master branch, except when releasing a beta (in which case the beta is released from master,
+and the previous stable branch is released from said branch).
 
 If you are in a beta version, `make release bump=stage` will switch to a stable.
 
