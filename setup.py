@@ -58,7 +58,7 @@ setup(
     install_requires=[
         "eth-utils>=1.0.1,<2",
         "hexbytes>=0.1.0,<1",
-        "rlp>=0.6.0,<3",
+        "rlp>=0.6.0,<4",
     ],
     python_requires='>=3.6, <4',
     extras_require=extras_require,
@@ -75,6 +75,7 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: Implementation :: PyPy',
     ],
 )
