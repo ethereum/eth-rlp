@@ -8,7 +8,7 @@ from setuptools import (
 extras_require = {
     'test': [
         "eth-hash[pycryptodome]",
-        "pytest==5.4.1",
+        "pytest>=6.2.5,<7",
         "pytest-xdist",
         "tox==3.14.6",
     ],
@@ -77,6 +77,7 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
         'Programming Language :: Python :: Implementation :: PyPy',
     ],
 )
