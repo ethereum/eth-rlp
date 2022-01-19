@@ -48,12 +48,6 @@ jobs:
       - image: circleci/python:3.10
         environment:
           TOXENV: lint
-  py36-core-rlp0:
-    <<: *common
-    docker:
-      - image: circleci/python:3.6
-        environment:
-          TOXENV: py36-core-rlp0
   py37-core-rlp0:
     <<: *common
     docker:
@@ -78,12 +72,6 @@ jobs:
       - image: pypy
         environment:
           TOXENV: pypy3-core-rlp0
-  py36-core-rlp1:
-    <<: *common
-    docker:
-      - image: circleci/python:3.6
-        environment:
-          TOXENV: py36-core-rlp1
   py37-core-rlp1:
     <<: *common
     docker:
@@ -114,12 +102,6 @@ jobs:
       - image: pypy
         environment:
           TOXENV: pypy3-core-rlp1
-  py36-core-rlp2:
-    <<: *common
-    docker:
-      - image: circleci/python:3.6
-        environment:
-          TOXENV: py36-core-rlp2
   py37-core-rlp2:
     <<: *common
     docker:
@@ -144,12 +126,6 @@ jobs:
       - image: circleci/python:3.10
         environment:
           TOXENV: py310-core-rlp2
-  py36-core-rlp3:
-    <<: *common
-    docker:
-      - image: circleci/python:3.6
-        environment:
-          TOXENV: py36-core-rlp3
   py37-core-rlp3:
     <<: *common
     docker:
@@ -180,23 +156,19 @@ workflows:
     jobs:
       - docs
       - lint
-      - py36-core-rlp0
       - py37-core-rlp0
       - py38-core-rlp0
       - py39-core-rlp0
       - pypy3-core-rlp0
-      - py36-core-rlp1
       - py37-core-rlp1
       - py38-core-rlp1
       - py39-core-rlp1
       - py310-core-rlp1
       - pypy3-core-rlp1
-      - py36-core-rlp2
       - py37-core-rlp2
       - py38-core-rlp2
       - py39-core-rlp2
       - py310-core-rlp2
-      - py36-core-rlp3
       - py37-core-rlp3
       - py38-core-rlp3
       - py39-core-rlp3
