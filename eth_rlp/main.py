@@ -1,3 +1,10 @@
+from typing import (
+    Any,
+    Dict,
+    Union,
+    cast,
+)
+
 from eth_utils import (
     keccak,
 )
@@ -8,11 +15,12 @@ from hexbytes import (
     HexBytes,
 )
 import rlp
+from typing_extensions import Self  # move to typing when >= py311
 
 
-class HashableRLP(rlp.Serializable):
+class HashableRLP(rlp.Serializable):  # type: ignore
     r"""
-    An extension of :class:`rlp.Serializable`. In adition to the below
+    An extension of :class:`rlp.Serializable`. In addition to the below
     functions, the class is iterable.
 
     Use like:
@@ -32,7 +40,7 @@ class HashableRLP(rlp.Serializable):
     """
 
     @classmethod
-    def from_dict(cls, field_dict):
+    def from_dict(cls, field_dict: Dict[str, Any]) -> Self:
         r"""
         In addition to the standard initialization of.
 
@@ -66,7 +74,7 @@ class HashableRLP(rlp.Serializable):
         return cls(**field_dict)
 
     @classmethod
-    def from_bytes(cls, serialized_bytes):
+    def from_bytes(cls, serialized_bytes: Union[bytes, bytearray]) -> Self:
         """
         Shorthand invocation for :meth:`rlp.decode` using this class.
 
@@ -74,9 +82,10 @@ class HashableRLP(rlp.Serializable):
         :return: the decoded object
         :rtype: HashableRLP
         """
-        return rlp.decode(serialized_bytes, cls)
+        decoded = rlp.decode(serialized_bytes, cls)
+        return cast(Self, decoded)
 
-    def hash(self):
+    def hash(self) -> HexBytes:
         """
         :returns: the hash of the encoded bytestring
         :rtype: ~hexbytes.main.HexBytes
@@ -88,13 +97,13 @@ class HashableRLP(rlp.Serializable):
             HexBytes,
         )
 
-    def __iter__(self):
-        if hasattr(self, 'fields'):
+    def __iter__(self) -> Any:
+        if hasattr(self, "fields"):
             return iter(getattr(self, field) for field, _ in self.fields)
         else:
             return super().__iter__()
 
-    def as_dict(self):
+    def as_dict(self) -> Dict[str, Any]:
         """
         Convert rlp object to a dict
 
@@ -102,6 +111,8 @@ class HashableRLP(rlp.Serializable):
         :rtype: dict
         """
         try:
-            return super().as_dict()
+            _as_dict = super().as_dict()
+            return cast(Dict[str, Any], _as_dict)
         except AttributeError:
-            return vars(self)
+            _as_dict = vars(self)
+            return cast(Dict[str, Any], _as_dict)
