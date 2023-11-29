@@ -1,19 +1,19 @@
 # eth-rlp
 
 [![Join the conversation on Discord](https://img.shields.io/discord/809793915578089484?color=blue&label=chat&logo=discord&logoColor=white)](https://discord.gg/GHryRvPB84)
-[![Build Status](https://circleci.com/gh/ethereum/<REPO_NAME>.svg?style=shield)](https://circleci.com/gh/ethereum/<REPO_NAME>)
-[![PyPI version](https://badge.fury.io/py/<PYPI_NAME>.svg)](https://badge.fury.io/py/<PYPI_NAME>)
-[![Python versions](https://img.shields.io/pypi/pyversions/<PYPI_NAME>.svg)](https://pypi.python.org/pypi/<PYPI_NAME>)
-[![Docs build](https://readthedocs.org/projects/<RTD_NAME>/badge/?version=latest)](https://<RTD_NAME>.readthedocs.io/en/latest/?badge=latest)
+[![Build Status](https://circleci.com/gh/ethereum/eth-rlp.svg?style=shield)](https://circleci.com/gh/ethereum/eth-rlp)
+[![PyPI version](https://badge.fury.io/py/eth-rlp.svg)](https://badge.fury.io/py/eth-rlp)
+[![Python versions](https://img.shields.io/pypi/pyversions/eth-rlp.svg)](https://pypi.python.org/pypi/eth-rlp)
+[![Docs build](https://readthedocs.org/projects/eth-rlp/badge/?version=latest)](https://eth-rlp.readthedocs.io/en/latest/?badge=latest)
 
 RLP definitions for common Ethereum objects in Python
 
-Read more in the [documentation on ReadTheDocs](https://<RTD_NAME>.readthedocs.io/). [View the change log](https://<RTD_NAME>.readthedocs.io/en/latest/release_notes.html).
+Read more in the [documentation on ReadTheDocs](https://eth-rlp.readthedocs.io/). [View the change log](https://eth-rlp.readthedocs.io/en/latest/release_notes.html).
 
 ## Quickstart
 
 ```sh
-python -m pip install <PYPI_NAME>
+python -m pip install eth-rlp
 ```
 
 ## Developer Setup
