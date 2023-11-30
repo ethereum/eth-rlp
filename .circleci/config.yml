@@ -85,18 +85,6 @@ jobs:
       - image: cimg/python:3.9
         environment:
           TOXENV: py39-core-rlp0
-  py310-core-rlp0:
-    <<: *common
-    docker:
-      - image: cimg/python:3.10
-        environment:
-          TOXENV: py310-core-rlp0
-  py311-core-rlp0:
-    <<: *common
-    docker:
-      - image: cimg/python:3.11
-        environment:
-          TOXENV: py311-core-rlp0
 
   py38-core-rlp1:
     <<: *common
@@ -260,8 +248,6 @@ workflows:
       - docs
       - py38-core-rlp0
       - py39-core-rlp0
-      - py310-core-rlp0
-      - py311-core-rlp0
       - py38-core-rlp1
       - py39-core-rlp1
       - py310-core-rlp1
