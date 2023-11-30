@@ -173,6 +173,31 @@ jobs:
         environment:
           TOXENV: py311-core-rlp3
 
+  py38-core-rlp4:
+    <<: *common
+    docker:
+      - image: cimg/python:3.8
+        environment:
+          TOXENV: py38-core-rlp4
+  py39-core-rlp4:
+    <<: *common
+    docker:
+      - image: cimg/python:3.9
+        environment:
+          TOXENV: py39-core-rlp4
+  py310-core-rlp4:
+    <<: *common
+    docker:
+      - image: cimg/python:3.10
+        environment:
+          TOXENV: py310-core-rlp4
+  py311-core-rlp4:
+    <<: *common
+    docker:
+      - image: cimg/python:3.11
+        environment:
+          TOXENV: py311-core-rlp4
+
   py38-lint:
     <<: *common
     docker:
@@ -249,6 +274,10 @@ workflows:
       - py39-core-rlp3
       - py310-core-rlp3
       - py311-core-rlp3
+      - py38-core-rlp4
+      - py39-core-rlp4
+      - py310-core-rlp4
+      - py311-core-rlp4
       - py38-lint
       - py39-lint
       - py310-lint
