@@ -3,6 +3,27 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-rlp v1.0.0 (2023-12-06)
+---------------------------
+
+Breaking Changes
+~~~~~~~~~~~~~~~~
+
+- Drop python 3.7 support (`#16 <https://github.com/ethereum/eth-rlp/issues/16>`__)
+
+
+Features
+~~~~~~~~
+
+- Add python 3.11 support (`#16 <https://github.com/ethereum/eth-rlp/issues/16>`__)
+
+
+Internal Changes - for eth-rlp Contributors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Merge updates from template, including use ``pre-commit`` for linting, and changing the name of the ``master`` branch to ``main`` (`#16 <https://github.com/ethereum/eth-rlp/issues/16>`__)
+
+
 eth-rlp v0.3.0 (2022-01-19)
 ---------------------------
 Eth_Rlp 0.3.0 (2022-01-19)
