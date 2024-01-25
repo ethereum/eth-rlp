@@ -110,6 +110,12 @@ jobs:
       - image: cimg/python:3.11
         environment:
           TOXENV: py311-core-rlp1
+  py312-core-rlp1:
+    <<: *common
+    docker:
+      - image: cimg/python:3.12
+        environment:
+          TOXENV: py312-core-rlp1
 
   py38-core-rlp2:
     <<: *common
@@ -135,6 +141,12 @@ jobs:
       - image: cimg/python:3.11
         environment:
           TOXENV: py311-core-rlp2
+  py312-core-rlp2:
+    <<: *common
+    docker:
+      - image: cimg/python:3.12
+        environment:
+          TOXENV: py312-core-rlp2
 
   py38-core-rlp3:
     <<: *common
@@ -160,6 +172,12 @@ jobs:
       - image: cimg/python:3.11
         environment:
           TOXENV: py311-core-rlp3
+  py312-core-rlp3:
+    <<: *common
+    docker:
+      - image: cimg/python:3.12
+        environment:
+          TOXENV: py312-core-rlp3
 
   py38-core-rlp4:
     <<: *common
@@ -185,6 +203,12 @@ jobs:
       - image: cimg/python:3.11
         environment:
           TOXENV: py311-core-rlp4
+  py312-core-rlp4:
+    <<: *common
+    docker:
+      - image: cimg/python:3.12
+        environment:
+          TOXENV: py312-core-rlp4
 
   py38-lint:
     <<: *common
@@ -210,6 +234,12 @@ jobs:
       - image: cimg/python:3.11
         environment:
           TOXENV: py311-lint
+  py312-lint:
+    <<: *common
+    docker:
+      - image: cimg/python:3.12
+        environment:
+          TOXENV: py312-lint
 
   py38-wheel:
     <<: *common
@@ -235,6 +265,12 @@ jobs:
       - image: cimg/python:3.11
         environment:
           TOXENV: py311-wheel
+  py312-wheel:
+    <<: *common
+    docker:
+      - image: cimg/python:3.12
+        environment:
+          TOXENV: py312-wheel
 
   py311-wheel-windows:
     <<: *windows_steps
@@ -252,24 +288,30 @@ workflows:
       - py39-core-rlp1
       - py310-core-rlp1
       - py311-core-rlp1
+      - py312-core-rlp1
       - py38-core-rlp2
       - py39-core-rlp2
       - py310-core-rlp2
       - py311-core-rlp2
+      - py312-core-rlp2
       - py38-core-rlp3
       - py39-core-rlp3
       - py310-core-rlp3
       - py311-core-rlp3
+      - py312-core-rlp3
       - py38-core-rlp4
       - py39-core-rlp4
       - py310-core-rlp4
       - py311-core-rlp4
+      - py312-core-rlp4
       - py38-lint
       - py39-lint
       - py310-lint
       - py311-lint
+      - py312-lint
       - py38-wheel
       - py39-wheel
       - py310-wheel
       - py311-wheel
+      - py312-wheel
       - py311-wheel-windows
