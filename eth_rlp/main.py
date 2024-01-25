@@ -1,3 +1,4 @@
+import sys
 from typing import (
     Any,
     Dict,
@@ -15,7 +16,15 @@ from hexbytes import (
     HexBytes,
 )
 import rlp
-from typing_extensions import Self  # move to typing when >= py311
+
+if sys.version_info >= (3, 11):
+    from typing import (
+        Self,
+    )
+else:
+    from typing_extensions import (
+        Self,
+    )
 
 
 class HashableRLP(rlp.Serializable):  # type: ignore
