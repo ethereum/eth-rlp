@@ -51,6 +51,7 @@ setup(
         "eth-utils>=2.0.0",
         "hexbytes>=0.1.0,<1",
         "rlp>=0.6.0",
+        "typing_extensions; python_version <= '3.11'",
     ],
     python_requires=">=3.8, <4",
     extras_require=extras_require,
