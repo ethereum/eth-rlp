@@ -39,7 +39,7 @@ with open("./README.md") as readme:
 setup(
     name="eth-rlp",
     # *IMPORTANT*: Don't manually change  the version here. Use `make bump`, as described in readme
-    version="1.0.0",
+    version="1.0.1",
     description="""eth-rlp: RLP definitions for common Ethereum objects in Python""",
     long_description=long_description,
     long_description_content_type="text/markdown",
