@@ -1,1 +1,0 @@
-Add the missing ``typing_extensions`` module requirement for Python <= 3.11

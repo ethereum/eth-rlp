@@ -3,6 +3,15 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-rlp v1.0.1 (2024-01-25)
+---------------------------
+
+Bugfixes
+~~~~~~~~
+
+- Add the missing ``typing_extensions`` module requirement for Python <= 3.11 (`#19 <https://github.com/ethereum/eth-rlp/issues/19>`__)
+
+
 eth-rlp v1.0.0 (2023-12-06)
 ---------------------------
 
