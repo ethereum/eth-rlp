@@ -1,0 +1,1 @@
+Add windows-wheel CI job for py312, set both py311 and py312 to use latest patch version
