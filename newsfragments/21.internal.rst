@@ -1,1 +1,0 @@
-Add ``py.typed`` file, move misplaced newsfragment, correct py version pins for ``typing-extensions``

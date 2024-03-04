@@ -3,6 +3,28 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-rlp v2.0.0 (2024-03-04)
+---------------------------
+
+Breaking Changes
+~~~~~~~~~~~~~~~~
+
+- Bump ``hexbytes`` dependency to ``>=1.0.0`` (`#21 <https://github.com/ethereum/eth-rlp/issues/21>`__)
+
+
+Features
+~~~~~~~~
+
+- Add Python 3.12 support (`#18 <https://github.com/ethereum/eth-rlp/issues/18>`__)
+
+
+Internal Changes - for eth-rlp Contributors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Add windows-wheel CI job for py312, set both py311 and py312 to use latest patch version (`#20 <https://github.com/ethereum/eth-rlp/issues/20>`__)
+- Add ``py.typed`` file, move misplaced newsfragment, correct py version pins for ``typing-extensions`` (`#21 <https://github.com/ethereum/eth-rlp/issues/21>`__)
+
+
 eth-rlp v1.0.1 (2024-01-25)
 ---------------------------
 
