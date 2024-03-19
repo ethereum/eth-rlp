@@ -3,6 +3,15 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-rlp v2.1.0 (2024-03-19)
+---------------------------
+
+Internal Changes - for eth-rlp Contributors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Bump to ``hexbytes>=1.2.0`` and add ``blocklint`` to linting (`#22 <https://github.com/ethereum/eth-rlp/issues/22>`__)
+
+
 eth-rlp v2.0.0 (2024-03-04)
 ---------------------------
 
