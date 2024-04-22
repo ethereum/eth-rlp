@@ -1,4 +1,5 @@
 import pytest
+
 from rlp.sedes import (
     big_endian_int,
 )
