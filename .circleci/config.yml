@@ -47,6 +47,9 @@ windows-wheel-steps:
     working_directory: C:\Users\circleci\project\eth-rlp
     environment:
       TOXENV: windows-wheel
+    resource_class: windows.medium
+    machine:
+      image: default
   restore-cache-step: &restore-cache-step
     restore_cache:
       keys:
