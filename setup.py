@@ -7,8 +7,9 @@ from setuptools import (
 extras_require = {
     "dev": [
         "build>=0.9.0",
-        "bumpversion>=0.5.3",
+        "bump_my_version>=0.19.0",
         "ipython",
+        "mypy==1.10.0",
         "pre-commit>=3.4.0",
         "tox>=4.0.0",
         "twine",
@@ -18,7 +19,7 @@ extras_require = {
         "sphinx>=6.0.0",
         "sphinx-autobuild>=2021.3.14",
         "sphinx_rtd_theme>=1.0.0",
-        "towncrier>=21,<22",
+        "towncrier>=24,<25",
     ],
     "test": [
         "eth-hash[pycryptodome]",
@@ -38,7 +39,7 @@ with open("./README.md") as readme:
 
 setup(
     name="eth-rlp",
-    # *IMPORTANT*: Don't manually change  the version here. Use `make bump`, as described in readme
+    # *IMPORTANT*: Don't manually change the version here. See Contributing docs for the release process.
     version="2.1.0",
     description="""eth-rlp: RLP definitions for common Ethereum objects in Python""",
     long_description=long_description,
@@ -72,5 +73,6 @@ setup(
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
         "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.13",
     ],
 )
