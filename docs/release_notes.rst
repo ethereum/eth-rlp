@@ -3,6 +3,21 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-rlp v2.2.0 (2025-02-04)
+---------------------------
+
+Features
+~~~~~~~~
+
+- Merge template, adding ``py313`` support and replacing ``bumpversion`` with ``bump-my-version``. (`#26 <https://github.com/ethereum/eth-rlp/issues/26>`__)
+
+
+Internal Changes - for eth-rlp Contributors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Merge template, fixing docs CI, add nightly CI runs (`#24 <https://github.com/ethereum/eth-rlp/issues/24>`__)
+
+
 eth-rlp v2.1.0 (2024-03-19)
 ---------------------------
 
