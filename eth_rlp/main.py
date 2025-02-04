@@ -99,11 +99,12 @@ class HashableRLP(rlp.Serializable):  # type: ignore
         :returns: the hash of the encoded bytestring
         :rtype: ~hexbytes.main.HexBytes
         """
-        return pipe(
-            self,
-            rlp.encode,
-            keccak,
-            HexBytes,
+        return HexBytes(
+            pipe(
+                self,
+                rlp.encode,
+                keccak,
+            )
         )
 
     def __iter__(self) -> Any:
