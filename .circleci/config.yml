@@ -147,6 +147,12 @@ jobs:
       - image: cimg/python:3.13
         environment:
           TOXENV: py313-core-rlp1
+  py314-core-rlp1:
+    <<: *common
+    docker:
+      - image: cimg/python:3.14
+        environment:
+          TOXENV: py314-core-rlp1
 
   py310-core-rlp2:
     <<: *common
