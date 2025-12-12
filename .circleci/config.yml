@@ -247,6 +247,37 @@ jobs:
         environment:
           TOXENV: py314-core-rlp4
 
+  py310-core-rlp5:
+    <<: *common
+    docker:
+      - image: cimg/python:3.10
+        environment:
+          TOXENV: py310-core-rlp5
+  py311-core-rlp5:
+    <<: *common
+    docker:
+      - image: cimg/python:3.11
+        environment:
+          TOXENV: py311-core-rlp5
+  py312-core-rlp5:
+    <<: *common
+    docker:
+      - image: cimg/python:3.12
+        environment:
+          TOXENV: py312-core-rlp5
+  py313-core-rlp5:
+    <<: *common
+    docker:
+      - image: cimg/python:3.13
+        environment:
+          TOXENV: py313-core-rlp5
+  py314-core-rlp5:
+    <<: *common
+    docker:
+      - image: cimg/python:3.14
+        environment:
+          TOXENV: py314-core-rlp5
+
   py310-lint:
     <<: *common
     docker:
@@ -380,6 +411,11 @@ define: &all_jobs
   - py312-core-rlp4
   - py313-core-rlp4
   - py314-core-rlp4
+  - py310-core-rlp5
+  - py311-core-rlp5
+  - py312-core-rlp5
+  - py313-core-rlp5
+  - py314-core-rlp5
   - py310-lint
   - py311-lint
   - py312-lint
