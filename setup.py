@@ -51,7 +51,7 @@ setup(
     install_requires=[
         "eth-utils>=2.0.0",
         "hexbytes>=1.2.0",
-        "rlp>=0.6.0",
+        "rlp>=1.0.0",
         "typing_extensions>=4.0.1; python_version <= '3.10'",
     ],
     python_requires=">=3.10, <4",
