@@ -123,31 +123,6 @@ jobs:
         environment:
           TOXENV: docs
 
-  py38-core-rlp0:
-    <<: *common
-    docker:
-      - image: cimg/python:3.8
-        environment:
-          TOXENV: py38-core-rlp0
-  py39-core-rlp0:
-    <<: *common
-    docker:
-      - image: cimg/python:3.9
-        environment:
-          TOXENV: py39-core-rlp0
-
-  py38-core-rlp1:
-    <<: *common
-    docker:
-      - image: cimg/python:3.8
-        environment:
-          TOXENV: py38-core-rlp1
-  py39-core-rlp1:
-    <<: *common
-    docker:
-      - image: cimg/python:3.9
-        environment:
-          TOXENV: py39-core-rlp1
   py310-core-rlp1:
     <<: *common
     docker:
@@ -172,19 +147,13 @@ jobs:
       - image: cimg/python:3.13
         environment:
           TOXENV: py313-core-rlp1
+  py314-core-rlp1:
+    <<: *common
+    docker:
+      - image: cimg/python:3.14
+        environment:
+          TOXENV: py314-core-rlp1
 
-  py38-core-rlp2:
-    <<: *common
-    docker:
-      - image: cimg/python:3.8
-        environment:
-          TOXENV: py38-core-rlp2
-  py39-core-rlp2:
-    <<: *common
-    docker:
-      - image: cimg/python:3.9
-        environment:
-          TOXENV: py39-core-rlp2
   py310-core-rlp2:
     <<: *common
     docker:
@@ -209,19 +178,13 @@ jobs:
       - image: cimg/python:3.13
         environment:
           TOXENV: py313-core-rlp2
+  py314-core-rlp2:
+    <<: *common
+    docker:
+      - image: cimg/python:3.14
+        environment:
+          TOXENV: py314-core-rlp2
 
-  py38-core-rlp3:
-    <<: *common
-    docker:
-      - image: cimg/python:3.8
-        environment:
-          TOXENV: py38-core-rlp3
-  py39-core-rlp3:
-    <<: *common
-    docker:
-      - image: cimg/python:3.9
-        environment:
-          TOXENV: py39-core-rlp3
   py310-core-rlp3:
     <<: *common
     docker:
@@ -246,19 +209,13 @@ jobs:
       - image: cimg/python:3.13
         environment:
           TOXENV: py313-core-rlp3
+  py314-core-rlp3:
+    <<: *common
+    docker:
+      - image: cimg/python:3.14
+        environment:
+          TOXENV: py314-core-rlp3
 
-  py38-core-rlp4:
-    <<: *common
-    docker:
-      - image: cimg/python:3.8
-        environment:
-          TOXENV: py38-core-rlp4
-  py39-core-rlp4:
-    <<: *common
-    docker:
-      - image: cimg/python:3.9
-        environment:
-          TOXENV: py39-core-rlp4
   py310-core-rlp4:
     <<: *common
     docker:
@@ -283,19 +240,44 @@ jobs:
       - image: cimg/python:3.13
         environment:
           TOXENV: py313-core-rlp4
+  py314-core-rlp4:
+    <<: *common
+    docker:
+      - image: cimg/python:3.14
+        environment:
+          TOXENV: py314-core-rlp4
 
-  py38-lint:
+  py310-core-rlp5:
     <<: *common
     docker:
-      - image: cimg/python:3.8
+      - image: cimg/python:3.10
         environment:
-          TOXENV: py38-lint
-  py39-lint:
+          TOXENV: py310-core-rlp5
+  py311-core-rlp5:
     <<: *common
     docker:
-      - image: cimg/python:3.9
+      - image: cimg/python:3.11
         environment:
-          TOXENV: py39-lint
+          TOXENV: py311-core-rlp5
+  py312-core-rlp5:
+    <<: *common
+    docker:
+      - image: cimg/python:3.12
+        environment:
+          TOXENV: py312-core-rlp5
+  py313-core-rlp5:
+    <<: *common
+    docker:
+      - image: cimg/python:3.13
+        environment:
+          TOXENV: py313-core-rlp5
+  py314-core-rlp5:
+    <<: *common
+    docker:
+      - image: cimg/python:3.14
+        environment:
+          TOXENV: py314-core-rlp5
+
   py310-lint:
     <<: *common
     docker:
@@ -320,19 +302,13 @@ jobs:
       - image: cimg/python:3.13
         environment:
           TOXENV: py313-lint
+  py314-lint:
+    <<: *common
+    docker:
+      - image: cimg/python:3.14
+        environment:
+          TOXENV: py314-lint
 
-  py38-wheel:
-    <<: *common
-    docker:
-      - image: cimg/python:3.8
-        environment:
-          TOXENV: py38-wheel
-  py39-wheel:
-    <<: *common
-    docker:
-      - image: cimg/python:3.9
-        environment:
-          TOXENV: py39-wheel
   py310-wheel:
     <<: *common
     docker:
@@ -357,6 +333,12 @@ jobs:
       - image: cimg/python:3.13
         environment:
           TOXENV: py313-wheel
+  py314-wheel:
+    <<: *common
+    docker:
+      - image: cimg/python:3.14
+        environment:
+          TOXENV: py314-wheel
 
   py311-windows-wheel:
     <<: *windows-wheel-setup
@@ -370,7 +352,6 @@ jobs:
       - <<: *install-latest-python-step
       - <<: *run-tox-step
       - <<: *save-cache-step
-
   py312-windows-wheel:
     <<: *windows-wheel-setup
     steps:
@@ -383,7 +364,6 @@ jobs:
       - <<: *install-latest-python-step
       - <<: *run-tox-step
       - <<: *save-cache-step
-
   py313-windows-wheel:
     <<: *windows-wheel-setup
     steps:
@@ -396,50 +376,60 @@ jobs:
       - <<: *install-latest-python-step
       - <<: *run-tox-step
       - <<: *save-cache-step
+  py314-windows-wheel:
+    <<: *windows-wheel-setup
+    steps:
+      - checkout
+      - <<: *restore-cache-step
+      - <<: *install-pyenv-step
+      - run:
+          name: set minor version
+          command: echo "export MINOR_VERSION='3.14'" >> $BASH_ENV
+      - <<: *install-latest-python-step
+      - <<: *run-tox-step
+      - <<: *save-cache-step
 
 define: &all_jobs
   - docs
-  - py38-core-rlp0
-  - py39-core-rlp0
-  - py38-core-rlp1
-  - py39-core-rlp1
   - py310-core-rlp1
   - py311-core-rlp1
   - py312-core-rlp1
   - py313-core-rlp1
-  - py38-core-rlp2
-  - py39-core-rlp2
+  - py314-core-rlp1
   - py310-core-rlp2
   - py311-core-rlp2
   - py312-core-rlp2
   - py313-core-rlp2
-  - py38-core-rlp3
-  - py39-core-rlp3
+  - py314-core-rlp2
   - py310-core-rlp3
   - py311-core-rlp3
   - py312-core-rlp3
   - py313-core-rlp3
-  - py38-core-rlp4
-  - py39-core-rlp4
+  - py314-core-rlp3
   - py310-core-rlp4
   - py311-core-rlp4
   - py312-core-rlp4
   - py313-core-rlp4
-  - py38-lint
-  - py39-lint
+  - py314-core-rlp4
+  - py310-core-rlp5
+  - py311-core-rlp5
+  - py312-core-rlp5
+  - py313-core-rlp5
+  - py314-core-rlp5
   - py310-lint
   - py311-lint
   - py312-lint
   - py313-lint
-  - py38-wheel
-  - py39-wheel
+  - py314-lint
   - py310-wheel
   - py311-wheel
   - py312-wheel
   - py313-wheel
+  - py314-wheel
   - py311-windows-wheel
   - py312-windows-wheel
   - py313-windows-wheel
+  - py314-windows-wheel
 
 workflows:
   version: 2

@@ -1,8 +1,6 @@
 import sys
 from typing import (
     Any,
-    Dict,
-    Union,
     cast,
 )
 
@@ -49,7 +47,7 @@ class HashableRLP(rlp.Serializable):  # type: ignore
     """
 
     @classmethod
-    def from_dict(cls, field_dict: Dict[str, Any]) -> Self:
+    def from_dict(cls, field_dict: dict[str, Any]) -> Self:
         r"""
         In addition to the standard initialization of.
 
@@ -83,7 +81,7 @@ class HashableRLP(rlp.Serializable):  # type: ignore
         return cls(**field_dict)
 
     @classmethod
-    def from_bytes(cls, serialized_bytes: Union[bytes, bytearray]) -> Self:
+    def from_bytes(cls, serialized_bytes: bytes | bytearray) -> Self:
         """
         Shorthand invocation for :meth:`rlp.decode` using this class.
 
@@ -113,7 +111,7 @@ class HashableRLP(rlp.Serializable):  # type: ignore
         else:
             return super().__iter__()
 
-    def as_dict(self) -> Dict[str, Any]:
+    def as_dict(self) -> dict[str, Any]:
         """
         Convert rlp object to a dict
 
@@ -122,7 +120,7 @@ class HashableRLP(rlp.Serializable):  # type: ignore
         """
         try:
             _as_dict = super().as_dict()
-            return cast(Dict[str, Any], _as_dict)
+            return cast(dict[str, Any], _as_dict)
         except AttributeError:
             _as_dict = vars(self)
-            return cast(Dict[str, Any], _as_dict)
+            return cast(dict[str, Any], _as_dict)
