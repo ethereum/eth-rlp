@@ -3,6 +3,21 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-rlp v3.0.0-beta.1 (2025-12-17)
+----------------------------------
+
+Breaking Changes
+~~~~~~~~~~~~~~~~
+
+- Drop support for Python 3.8 and 3.9 (`#27 <https://github.com/ethereum/eth-rlp/issues/27>`__)
+
+
+Features
+~~~~~~~~
+
+- Add support for pyrlp v5 and Python 3.14 (`#27 <https://github.com/ethereum/eth-rlp/issues/27>`__)
+
+
 eth-rlp v2.2.0 (2025-02-04)
 ---------------------------
 
